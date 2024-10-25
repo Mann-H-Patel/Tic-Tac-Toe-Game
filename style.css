@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1C1C1C; /* Dark background */
+    text-align: center;
+    color: #FFFFFF; /* Light text for contrast */
+    font-family: 'Luckiest Guy', cursive;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 1rem 0;
+    color: #FF9800; /* Bright orange for header */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+h2.details {
+    font-size: 1.2rem;
+    color: #FFEB3B; /* Bright yellow for details */
+    margin-bottom: 1rem;
+}
+
+.main-container {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between boxes */
+    background-color: #2C2C2C; /* Darker container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.box {
+    width: 90px;
+    height: 90px;
+    border: 2px solid #FF9800; /* Bright border color */
+    border-radius: 8px;
+    font-size: 60px;
+    color: #FF9800; /* Bright text color */
+    background-color: #444; /* Dark gray for boxes */
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.2s;
+}
+
+.box:hover {
+    background-color: #FF5722; /* Bright red on hover */
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 87, 34, 0.5);
+}
+
+#reset, #new-game {
+    background: linear-gradient(90deg, #FF9800, #FF5722); /* Gradient for buttons */
+    color: white;
+    width: 140px;
+    height: 50px;
+    border: none;
+    font-size: 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s, box-shadow 0.2s;
+}
+
+#reset:hover, #new-game:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
+}
+
+#msg {
+    color: #FFEB3B; /* Bright yellow for messages */
+    font-size: 24px;
+    margin-bottom: 1rem;
+    animation: fadeIn 0.5s; /* Fade in animation */
+}
+
+.msg-box {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hide {
+    display: none;
+}
+
+.details {
+    color: #FFEB3B; /* Bright yellow for details */
+}
+
+.details a {
+    color: #FFA500; /* Bright orange for links */
+    text-decoration: underline;
+}
+
+#game-mode-selection {
+    margin: 20px 0;
+}
+
+#game-mode-selection h2 {
+    color: #FFEB3B; /* Bright yellow for header */
+    margin-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 20px; /* Space between buttons */
+}
+
+#game-mode-selection button {
+    background-color: #FF9800; /* Bright orange for buttons */
+    color: white;
+    width: 200px;
+    height: 50px;
+    border: none;
+    font-size: 20px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.1s;
+}
+
+#game-mode-selection button:hover {
+    background-color: #FF5722; /* Darker orange on hover */
+    transform: scale(1.05);
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 312px) {
+    .box {
+        width: 80px;
+        height: 80px;
+    }
+}
